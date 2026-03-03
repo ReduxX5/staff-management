@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Staff Management Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="logo">CorpStaff</h2>
+    <nav>
+      <a href="#" class="active">Dashboard</a>
+      <a href="#">Employees</a>
+      <a href="#">Departments</a>
+      <a href="#">Reports</a>
+      <a href="#">Settings</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <header class="topbar">
+      <h1>Dashboard</h1>
+      <div class="user">Admin</div>
+    </header>
+
+    <!-- Stats Cards -->
+    <section class="cards">
+      <div class="card">
+        <h3>Total Employees</h3>
+        <p>128</p>
+      </div>
+
+      <div class="card">
+        <h3>Departments</h3>
+        <p>8</p>
+      </div>
+
+      <div class="card">
+        <h3>Managers</h3>
+        <p>12</p>
+      </div>
+    </section>
+
+    <!-- Employee Table -->
+    <section class="table-section">
+      <h2>Recent Employees</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Role</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Maria Santos</td>
+            <td>IT</td>
+            <td>Developer</td>
+            <td><span class="status active">Active</span></td>
+          </tr>
+          <tr>
+            <td>John Reyes</td>
+            <td>HR</td>
+            <td>Manager</td>
+            <td><span class="status inactive">Inactive</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>

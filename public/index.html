@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartQueue Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>SmartQueue</h1>
+        <p>Queue Management System</p>
+    </header>
+
+    <section class="card">
+        <h2>Join Queue</h2>
+        <form>
+            <label for="service">Select Service</label>
+            <select id="service">
+                <option>Billing</option>
+                <option>Consultation</option>
+                <option>Document Processing</option>
+            </select>
+
+            <button type="submit">Get Queue Number</button>
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Current Queue Status</h2>
+        <div class="queue-display">
+            <div class="queue-item">
+                <span class="label">Now Serving</span>
+                <span class="value">Q-102</span>
+            </div>
+            <div class="queue-item">
+                <span class="label">Your Number</span>
+                <span class="value">Q-120</span>
+            </div>
+            <div class="queue-item">
+                <span class="label">People Ahead</span>
+                <span class="value">18</span>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<form id="loginForm">
+  <input type="text" id="username" placeholder="Username" required>
+  <input type="password" id="password" placeholder="Password" required>
+  <button type="submit">Login</button>
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>

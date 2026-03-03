@@ -1,0 +1,36 @@
+CREATE DATABASE smartqueue;
+USE smartqueue;
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(100) UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  role ENUM('ADMIN','STAFF','CUSTOMER') DEFAULT 'CUSTOMER',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE services (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  description TEXT,
+  is_active BOOLEAN DEFAULT TRUE
+);
+
+CREATE TABLE tickets (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  queue_number VARCHAR(20),
+  status ENUM('WAITING','CALLED','SERVED','SKIPPED') DEFAULT 'WAITING',
+  service_id INT,
+  user_id INT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (service_id) REFERENCES services(id),
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+SHOW DATABASES;
+USE smartqueue;
+SHOW TABLES;
+
+INSERT INTO users (name, password)
+VALUES ('admin', 'admin123');
